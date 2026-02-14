@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey of Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --romantic-pink: #ff4d6d;
+            --gold: #d4af37;
+            --soft-cream: #fffaf0;
+            --rose: #ff85a1;
+            --sparkle: #fff700;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--soft-cream);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Decorative Borders between sections */
+        section::after {
+            content: "❦";
+            position: absolute;
+            bottom: -15px;
+            color: var(--gold);
+            font-size: 2rem;
+        }
+
+        h1 { font-family: 'Great Vibes', cursive; color: var(--romantic-pink); font-size: 4rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        h2 { font-family: 'Dancing Script', cursive; color: var(--gold); font-size: 2.8rem; margin: 10px 0; }
+        
+        .quote {
+            font-style: italic;
+            color: #774936;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* Photo Grid Container */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        /* Sparkle Effect on Hover */
+        .frame-gold, .frame-polaroid, .frame-rose, .frame-hero {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .frame-gold:hover, .frame-polaroid:hover, .frame-rose:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px var(--rose);
+            z-index: 10;
+        }
+
+        /* Individual Frame Styles */
+        .frame-hero {
+            border: 15px solid #fff;
+            outline: 2px solid var(--gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 350px;
+            margin: 20px auto;
+        }
+
+        .frame-gold {
+            border: 8px solid #fff;
+            border-image: linear-gradient(to bottom right, #b8860b, #e6be8a, #b8860b) 1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 5px; background: white;
+        }
+
+        .frame-polaroid {
+            background: white;
+            padding: 12px 12px 45px 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+        }
+        .frame-polaroid:nth-child(even) { transform: rotate(3deg); }
+
+        .frame-rose {
+            border-radius: 60px 60px 10px 10px;
+            border: 5px solid var(--rose);
+            padding: 6px; background: #fff;
+            overflow: hidden;
+        }
+
+        img { width: 100%; height: 220px; object-fit: cover; display: block; border-radius: 2px; }
+        .frame-hero img { height: auto; }
+
+        .btn-next {
+            margin-top: 40px; padding: 12px 35px;
+            background: var(--romantic-pink); color: white;
+            text-decoration: none; border-radius: 30px; font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Heart & Sparkle Animation */
+        .heart { position: absolute; color: var(--romantic-pink); font-size: 20px; animation: float 5s infinite ease-in; opacity: 0; z-index: -1; }
+        .sparkle { position: absolute; width: 4px; height: 4px; background: var(--sparkle); border-radius: 50%; pointer-events: none; }
+
+        @keyframes float { 0% { transform: translateY(0) scale(1); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-100vh) scale(1.5); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <section id="page1">
+        <h1>Happy Valentine's Day</h1>
+        <div class="frame-hero">
+            <img src="v1.jpg" alt="Valentine">
+        </div>
+        <div class="quote">"In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."</div>
+        <p>To my beautiful wife, here is a look back at our magic.</p>
+        <a href="#page2" class="btn-next">Our Journey Begins ❤️</a>
+    </section>
+
+    <section id="page2">
+        <h2>The First Meet at Pune</h2>
+        <div class="quote">"I knew from the very first moment we met that there was something special about us. That day in Pune changed my destiny forever."</div>
+        <div class="photo-grid">
+            <div class="frame-gold"><img src="fm3.jpg"></div>
+            <div class="frame-gold"><img src="fm1.jpg"></div>
+            <div class="frame-gold"><img src="fm2.jpg"></div>
+            <div class="frame-gold"><img src="fm4.jpg"></div>
+        </div>
+        <p>Where the story began... Nov 29, 2024</p>
+        <a href="#page3" class="btn-next">The Engagement</a>
+    </section>
+
+    <section id="page3">
+        <h2>Our Engagement</h2>
+        <div class="quote">"The best thing to hold onto in life is each other. On Feb 20, 2025, I promised to never let go of your hand."</div>
+        <div class="photo-grid">
+            <div class="frame-polaroid"><img src="e1.jpg"></div>
+            <div class="frame-polaroid"><img src="e2.jpg"></div>
+            <div class="frame-polaroid"><img src="e3.jpg"></div>
+            <div class="frame-polaroid"><img src="e4.jpg"></div>
+        </div>
+        <p>A promise of forever.</p>
+        <a href="#page4" class="btn-next">The Wedding Day</a>
+    </section>
+
+    <section id="page4">
+        <h2>Mr. & Mrs.: May 23, 2025</h2>
+        <div class="quote">"A successful marriage requires falling in love many times, always with the same person. My favorite day, when you became my forever."</div>
+        <div class="photo-grid">
+            <div class="frame-rose"><img src="m1.jpg"></div>
+            <div class="frame-rose"><img src="m2.jpg"></div>
+            <div class="frame-rose"><img src="m4.jpg"></div>
+            <div class="frame-rose"><img src="m3.jpg"></div>
+        </div>
+        <p>The start of our "Happily Ever After".</p>
+        <a href="#page5" class="btn-next">Special Message</a>
+    </section>
+
+    <section id="page5">
+    <h1>माझ्या प्रिय बायकोसाठी...</h1>
+    
+    <div style="background: #fffef0; padding: 40px; border-left: 5px solid var(--gold); box-shadow: 10px 10px 20px rgba(0,0,0,0.05); max-width: 650px; text-align: left; font-family: 'Poppins', sans-serif; position: relative; margin: 20px auto;">
+        <span style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--romantic-pink);">माझ्या लाडक्या बायकोस,</span>
+        <p style="color: #444; line-height: 2; margin-top: 15px; font-size: 1.1rem;">
+            आपले हे फोटो पाहताना जुन्या आठवणी ताज्या झाल्या— २९ नोव्हेंबरला किरनळ्ळीत  झालेली आपली ती पहिली भेट, त्यानंतर फेब्रुवारीमध्ये मी तुला कायमचा माझा हात मागितला तो क्षण, आणि अखेर मे महिन्यात झालेले आपले सुंदर लग्न— हे सर्व आठवून माझे मन कृतज्ञतेने भरून आले आहे. 
+            <br><br>
+            गेल्या एका वर्षात तू माझे आयुष्य एका सुंदर स्वप्नासारखे बनवले आहेस. पती-पत्नी म्हणून आपला हा पहिला 'व्हॅलेंटाईन डे' आहे. ज्या दिवशी आपण लग्नासाठी 'हो' म्हणालो, त्या दिवशी तू मला जितका आनंद दिलास, तसाच आनंद मी तुला आयुष्यभर देत राहीन, हे माझे वचन आहे.
+            <br><br>
+            तू माझा भूतकाळ, वर्तमान आणि माझे संपूर्ण भविष्य आहेस. तुझ्यासोबत जगण्यासाठी हे संपूर्ण आयुष्य सुद्धा मला कमी वाटतेय.
+        </p>
+        <p style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--gold); text-align: right; margin-top: 20px;">
+            तुझाच, <br> विनोद  
+        </p>
+    </div>
+
+    <h2 style="font-size: 3rem; animation: pulse 1.5s infinite; margin-top: 50px;">व्हॅलेंटाईन डे च्या हार्दिक शुभेच्छा!</h2>
+</section>
+
+    <script>
+        // Floating Hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 300);
+
+        // Hover Sparkle Effect
+        document.querySelectorAll('.photo-grid div, .frame-hero').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                for(let i=0; i<3; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.classList.add('sparkle');
+                    sparkle.style.top = (e.clientY + window.scrollY + (Math.random() - 0.5) * 40) + 'px';
+                    sparkle.style.left = (e.clientX + (Math.random() - 0.5) * 40) + 'px';
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.style.transition = "all 0.5s";
+                        sparkle.style.opacity = "0";
+                        sparkle.style.transform = "scale(2)";
+                        setTimeout(() => sparkle.remove(), 500);
+                    }, 50);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
